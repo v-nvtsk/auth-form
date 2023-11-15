@@ -98,6 +98,32 @@ input {
   }
 }
 
+.validation-error {
+  margin-top: 5px;
+  color: red;
+  font-size: 0.75rem;
+  line-height: 1;
+  display: none;
+}
+
+.field__input {
+  &.invalid {
+    border-bottom: 1px solid red;
+    & ~ .field__label {
+      color: red;
+    }
+    & ~ .validation-error {
+      display: block;
+    }
+  }
+  &.valid {
+    border-bottom: 1px solid green;
+    & ~ .field__label {
+      color: green;
+    }
+  }
+}
+
 form.loading .loader {
   position: absolute;
   left: 10%;
