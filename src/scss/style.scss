@@ -13,3 +13,13 @@ label,
 input {
   display: block;
 }
+
+.container {
+  margin: 0 auto;
+  max-width: 1440px;
+  min-width: 250px;
+  padding: 40px;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
