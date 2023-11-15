@@ -43,3 +43,35 @@ input {
   width: 100%;
 }
 
+.form__field {
+  position: relative;
+  margin-top: 2rem;
+
+  .field__label {
+    position: absolute;
+    pointer-events: none;
+    top: 25%;
+    transition: all 0.5s;
+    font-size: 0.75rem;
+  }
+
+  .field__input {
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    line-height: 2rem;
+    &::placeholder {
+      opacity: 0;
+    }
+    &:focus,
+    &:not(:placeholder-shown) {
+      ~ .field__label {
+        top: -25%;
+      }
+    }
+  }
+}
